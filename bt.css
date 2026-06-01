@@ -1,0 +1,737 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://latamobility.com/wp-content/uploads/2023/12/volytica-1024x572.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+header {
+    background: linear-gradient(90deg, rgba(8, 10, 14, .55), rgba(8, 10, 14, .35));
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #f5f5f5;
+    margin: 12px 0;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+p a {
+    color: #00ff9d;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: #00cfff;
+    text-decoration: underline;
+}
+
+p.status {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 12px;
+    border-radius: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+
+
+a {
+    color: #ffd1dc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+h1{
+    font-size: 32px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.logo{
+    position: relative;
+    width: 100px;
+    margin: 10px;
+    margin-top: 10px;
+}
+.menu-icon {
+    display: none;
+}
+
+.search {
+    width: 100%;
+}
+
+.search input {
+    padding: 8px 15px;
+    border: 1px solid #e27ec1;
+    border-radius: 20px; /* Rounded pill shape */
+    background: transparent;
+    color: white; /* Text input color */
+    outline: none;
+    width: 200px; /* Fixed width */
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search input::placeholder {
+    color: white; /* Lighter placeholder text */
+}
+
+.search input:focus {
+    width: 250px; /* Expand on focus */
+    border-color: pink; /* Highlight color on focus */
+}
+
+.navbar{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+.navbar ul li a {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    text-decoration: none;
+}
+.navbar ul li a:hover {
+    background-image: linear-gradient(180deg, pink, rgb(0, 255, 21));
+    color: rgb(7, 7, 7);
+    border: 2px solid gold;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 5px;
+}
+.login{
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    background-image: linear-gradient(45deg, pink, rgb(157, 255, 0));
+    border-radius: 30px;
+    margin-right: 5px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.login:hover{
+    background-image: linear-gradient(180deg, pink, rgb(157, 255, 0));
+    padding: 15px 25px;
+    border-radius: 30px;
+    
+}
+.signup{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    background-image: linear-gradient(45deg, pink, rgb(0, 255, 157));
+    border-radius: 30px;
+    margin-right: 5px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.signup:hover{
+    background-image: linear-gradient(180deg, pink, rgb(0, 255, 157));
+    padding: 15px 25px;
+    border-radius: 30px;
+    
+}
+.download{
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-image: linear-gradient(90deg, pink, rgb(255, 0, 98));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+.download:hover{
+    padding: 20px 25px;
+    border-top-right-radius: 30px;
+    background-image: linear-gradient(180deg, pink, rgb(255, 0, 98));
+}
+main {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(45deg, rgba(8, 10, 14, .55), rgba(8, 10, 14, .35));
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.945);
+}
+.menu {
+    height: auto;
+    min-height: 200px;
+}
+
+.about{
+    font-size: 32px;
+    text-align: center;
+}
+.availabletickets {
+    display: none;
+    opacity: 0;
+    list-style: decimal inside;
+    columns: 3;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+.dropdown-container:hover .availabletickets {
+    display: block;
+    opacity: 1;
+}
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.availabletickets li {
+    padding: 5px 0;
+    
+}
+.avtick:hover{
+    background-color: #d27ee2;
+}
+
+table {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-color: black;
+}
+th {
+    background-image: linear-gradient(45deg, pink, rgb(0, 255, 157));
+    color: rgb(97, 202, 97);
+    padding: 10px;
+}
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+h2,h3{
+    text-align: center;
+    padding-top: 20px;
+}
+#form {
+    margin-bottom: 15px;
+    margin-left: auto;
+    max-width: 100%;
+    width: auto;
+    padding: 10px;
+    padding-top: 30px;
+    background: linear-gradient(45deg, rgba(9, 11, 15, 0.55), rgba(8, 10, 14, .35));
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;   
+}
+.form-group {
+    margin: auto;
+    margin-top: 5px;
+    max-width: 100%;
+    width: 80%;
+    padding: 10px;
+    padding-top: 30px;
+    background: linear-gradient(45deg, rgba(9, 11, 15, 0.55), rgba(8, 10, 14, .35));
+    border-radius: 50px;
+    box-shadow: 2px 4px 8px white;
+    text-align: center; 
+    display: none;  
+}
+.form-group.active{
+    display: block;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+
+select,
+input:not([type="radio"]),
+button  {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 30px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+select:focus, input:focus, button:focus {
+            border-color: #0f0ce2;
+            color: blue;
+            outline: none;
+}
+.form-group input::placeholder{
+    color: rgb(192, 192, 236);
+    font-weight: lighter;
+}
+
+.form-group input[type="radio"]{
+    width: auto;
+    margin: 0 6px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button {
+    
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+button:hover {
+background-color: #0056b3;
+}
+.form-buttons input[type="submit"],
+.form-buttons input[type="reset"] {
+    position: relative;
+    padding: 10px 20px;
+    width: auto;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+    transition: background-color 0.3s ease;
+}
+.form-buttons input[type="submit"] {
+    background-image: linear-gradient(45deg, pink, rgb(255, 0, 13));
+    color: white;
+}
+.form-buttons input[type="submit"]:hover {
+    background-image: linear-gradient(45deg, pink, rgb(255, 0, 255));
+}
+.form-buttons input[type="reset"] {
+    background-image: linear-gradient(45deg, pink, rgb(10, 136, 88));
+    color: #333;
+}
+.form-buttons input[type="reset"]:hover {
+    background-image: linear-gradient(45deg, pink, rgb(0, 255, 157));
+}
+.foot{
+    padding: auto;
+}
+
+footer {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.55), rgba(8, 10, 14, .35));
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: pink;
+}
+footer i.fa-brands {
+    font-size: 24px;
+    margin: 0 10px;
+}
+footer div.social-links { 
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links{
+    display: flex;
+    gap: 1rem;
+}
+.social-links a {
+    display: inline-flex;
+    background: transparent;
+    transition: 0.5s;
+}
+.social-links a:hover{
+    transform: translateY(-10px);
+}
+.fa-youtube{
+    color: tomato;
+}
+.fa-youtube:hover{
+    color: red;
+}
+.fa-telegram{
+    color: skyblue;
+}
+.fa-telegram:hover{
+    color: rgb(64, 175, 219);
+}
+.fa-facebook{
+    color: rgba(0, 110, 255, 0.753);
+}
+.fa-facebook:hover{
+    color: blue;
+}
+.fa-twitter{
+    color: rgba(148, 30, 9, 0.705);
+}
+.fa-twitter:hover{
+    color: rgb(245, 107, 82);
+}
+.fa-whatsapp{
+    color: rgb(26, 143, 26);
+}
+.fa-whatsapp:hover{
+    color: rgb(12, 241, 12);
+}
+.fa-instagram{
+    color: pink;
+}
+.fa-instagram:hover{
+    color: rgb(219, 124, 140);
+}
+
+.book-ticket-page .form-group {
+    display: block;
+}
+
+
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Available seat */
+.seat {
+    width: 100%;
+    height: 45px;
+    background-color: #6e6c75;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+}
+
+/* Hover only for available seats */
+.seat:not(.booked):hover {
+    background-color: #9c9aa5;
+}
+
+/* Selected seat */
+.seat.selected {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Booked / unavailable seat */
+.seat.booked {
+    background-color: #dc3545;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+#summary {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: green;
+}
+
+/*animation
+*/
+.navbar a, .navbar ul li{
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards;
+}
+
+
+.driver-warning {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.driver-success {
+    color: #00ff9d;
+    font-weight: bold;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.driver-status {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 12px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.ticket-info {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 500px;
+}
+
+.ticket-valid {
+    color: #00ff9d;
+    font-weight: bold;
+}
+
+.ticket-invalid {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+
+
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.avtick{
+    opacity: 0;
+    animation: popIn 2s ease-in-out forwards;
+}
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+table{
+    opacity: 0;
+    animation: slideUp 2s ease-in-out forwards;
+}
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form-group{
+    opacity: 0;
+    animation: fadeInForm 2s ease-in-out forwards;
+}
+.book-ticket-page .form-group {
+    opacity: 1;
+}
+
+@keyframes fadeInForm {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* responsive
+small screen(phones):up to 767px
+medium screen(tablets,pc):768 to 1023px
+large screen(desktop):1024&above*/
+
+@media (max-width: 767px) {
+
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-icon {
+        display: block;
+        align-self: flex-end;
+        cursor: pointer;
+        font-size: 28px;
+        color: white; 
+        margin-left: auto;
+    }
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .navbar {     
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(8, 10, 14, .55), rgba(8, 10, 14, .35));
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li {
+        
+        text-align: center;
+    }
+        
+
+    .navbar ul li a {
+        font-size: 18px;
+        padding: 12px;
+        display: block;
+    }
+    .form-group {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .login,
+    .signup,
+    .download {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+
+
+@media(min-width: 768px) and (max-width: 1023px){
+    h1{
+        font-size: 30px;
+    }
+    .navbar {
+        background: linear-gradient(180deg, rgba(8, 10, 14, .55), rgba(8, 10, 14, .35));
+        flex-direction: column;
+        padding-top: 20px;
+        border-radius: 30px;
+    }
+    .availabletickets {
+        columns: 2; /* Stack list on tablets */
+    }
+    
+}
+
+
+@media(min-width: 1024px){
+    h1{
+        font-size: 32px;
+    }
+
+}
+
+.error-message {
+    padding: 10px;
+    background: #333;
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
